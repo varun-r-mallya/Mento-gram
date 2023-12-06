@@ -9,10 +9,10 @@ MentoGram will allow organisations/clubs/institutions to set up their own person
 <h3>Use Cases:</h3>
 MentoGram has a wide variety of use cases.
 It can be used 
-- by clubs/institutions which mentor students to code. 
-- by educators who teach coding to solve doubts one on one.
-- to take online coding rounds of interviews.
-- to do collaborative coding during hackathons.
+- by clubs/institutions which mentor students to code. <br>
+- by educators who teach coding to solve doubts one on one. <br>
+- to take online coding rounds of interviews. <br>
+- to do collaborative coding during hackathons. <br>
 
 <h3>Context (With respect to SDSLabs):</h3>
 MentoGram can be used by clubs like SDSLabs which mentor people new to coding and development. It provides a much cleaner way to code collaboratively by bunching together video chat along with text chat and collaborative code editing. I think this will serve SDSLabs well in the future when they mentor the participants of WoC.
@@ -21,22 +21,25 @@ MentoGram can be used by clubs like SDSLabs which mentor people new to coding an
 This will help the mentors reach their mentees better and the final project comes out much better than expected due to the added layer of collaborative coding. This will also help the mentee learn very fast and would add to the convenience of both the mentor and the mentee.
 
 ### Primary goals:
--Making a registration and login system for the mentor who will be allowed to create accounts for their mentees. The mentees will be able to change the password set by the mentor.
--The mentees and the mentors will be able to upload files. These files can be saved, edited and downloaded.
--The editor should allow for real time collaboration where each user’s cursor shows up on either user’s screen with their name tags like Google Docs.
--There should be a video chat facility where either user can call the other.
--There should be an upload button for both users to upload their files and (for primary goal only) the file currently on the screen gets downloaded onto both computers and the new file is displayed. 
--Add interpreter support for Python.
+<ol>
+<li>Making a registration and login system for the mentor who will be allowed to create accounts for their mentees. The mentees will be able to change the password set by the mentor.</li>
+<li>The mentees and the mentors will be able to upload files. These files can be saved, edited and downloaded.</li>
+<li>The editor should allow for real time collaboration where each user’s cursor shows up on either user’s screen with their name tags like Google Docs.</li>
+<li>There should be a video chat facility where either user can call the other.</li>
+<li>There should be an upload button for both users to upload their files and (for primary goal only) the file currently on the screen gets downloaded onto both computers and the new file is displayed.</li>
+<li>Add interpreter support for Python.</li>
+</ol>
 
 ### Secondary Goals (To be done after accomplishing primary):
--The mentees and mentors will have access to a common file manager which will store all their uploaded files and can be viewed like VS Code.
--The text editor can have the support to edit more than one file at a time using tabs like VS Code.
--There should be a text chat facility which is persistent and gets stored.
--A way for more than two users to be on the same chat can be added. 
--If mentor and mentee are typing in the same place at the same time, the mentor’s text should be given priority and get typed.
--Possibly adding online compilers to the web app to make it a complete online IDE.
--Add a questions storage folder and a point system where mentees are awarded points on solving the questions posed by the mentor.
-
+<ol>
+<li>The mentees and mentors will have access to a common file manager which will store all their uploaded files and can be viewed like VS Code.</li>
+<li>The text editor can have the support to edit more than one file at a time using tabs like VS Code.</li>
+<li>There should be a text chat facility which is persistent and gets stored.</li>
+<li>A way for more than two users to be on the same chat can be added.</li>
+<li>If mentor and mentee are typing in the same place at the same time, the mentor’s text should be given priority and get typed.</li>
+<li>Possibly adding online compilers to the web app to make it a complete online IDE.</li>
+<li>Add a questions storage folder and a point system where mentees are awarded points on solving the questions posed by the mentor.</li>
+</ol>
 
 ### Tentative Tech stack(s) to achieve primary goals:
 -Flask on Python to handle backend.
@@ -52,8 +55,7 @@ This will help the mentors reach their mentees better and the final project come
 -I will be hashing the passwords using bcrypt, a Python library.
 -I will only be providing Python interpreter support because I would have to implement each interpreter/compiler for several languages. This would be impractical for one person to do and Python would serve as a proof of concept that it can be done.
 -To make the file manager, I will be tentatively using https://chonky.io/ as the primary file selector and manager while I will be using https://pqina.nl/filepond/ for uploading the files. FilePond optimises image uploads and even text file uploads to make them faster. I’ll also be using https://github.com/pqina/react-filepond to get drag and drop support.
--The Python interpreter will be Web Based and will be a ReactJS library https://github.com/elilambnz/react-py which is demonstrated here https://elilambnz.github.io/react-py/docs/examples/basic-example. Since this example uses Ace-Editor, the integration with my own site will be much easier. 
-
+-The Python interpreter will be Web Based and will be a ReactJS library https://github.com/elilambnz/react-py which is demonstrated here https://elilambnz.github.io/react-py/docs/examples/basic-example. Since this example uses Ace-Editor, the integration with my own site will be much easier.
 
 ### Timeline for project completion:
 
@@ -63,7 +65,7 @@ This will help the mentors reach their mentees better and the final project come
 -December 12th to 15th: Making the login and registration pages along with their respective forms, setting up the password hashing and the file system in the database for each user.
 -December 16th to 20th: Making the code editor as a separate module and integrating it to the main website as shown in the user flow section along with adding the upload file functionality to the website.
 -December 20th to 24th: Adding the collaborative coding part with the highlighted cursors of each user to the code editor and troubleshooting the entire system.
--December 24th to 28th: Adding the video chat feature to the website according to the user flow section. 
+-December 24th to 28th: Adding the video chat feature to the website according to the user flow section.
 -December 28th: MID EVALUATION
 -January 2nd to 5th: Fixing Bugs in the primary project and starting with the secondary goal of adding text chat.
 -January 6th to 10th: Adding the file manager as part of the secondary goal. Also adding the interpreter support at this stage.
